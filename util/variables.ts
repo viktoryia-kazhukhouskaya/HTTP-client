@@ -1,32 +1,31 @@
-import { randomGenerator } from "./randomGenerator";
+import { generateInteger, generateString } from "./randomGenerator";
 
 //Randomly generated values
-export const sessionId: string = randomGenerator.getRandomId(32);
-export const licenseeSessionId: string = randomGenerator.getRandomId(32);
-export const licenseePlayerId: string = randomGenerator.getRandomNumericId(6);
-export const playerGameId: string = randomGenerator.getRandomId(24);
-export const gameRoundId: string = randomGenerator.getRandomId(32);
-export const txId: string = randomGenerator.getRandomNumericId(18);
-export const txId1: string = randomGenerator.getRandomNumericId(18);
-export const betId: string = randomGenerator.getRandomId(32);
-export const betId1: string = randomGenerator.getRandomId(32);
-export const jackpotId: string = "nwa6zu5zlncqcorp";
-export const jackpotTopPotId: string = "inttestp6k0go9zy";
-export const reservePostId: string = "inttestn67mksw5y";
+export const sessionId: string = generateString(32);
+export const licenseeSessionId: string = generateString(32);
+export const licenseePlayerId: string = generateInteger(6);
+export const playerGameId: string = generateString(24);
+export const gameRoundId: string = generateString(32);
+export const playerId: string = generateString(16);
+export const txId: string = generateInteger(18);
+export const txId1: string = generateInteger(18);
+export const betId: string = generateString(32);
+export const betId1: string = generateString(32);
+export const jackpotId: string = generateString(16);
+export const jackpotTopPotId: string = generateString(16);
+export const reservePostId: string = generateString(16);
 
 //Default values
 export const casinoId: string = "testrbowevostdg1";
 export const balanceId: string = "combined";
-export const playerId: string = "mk4743pzmjuaadei";
 export const channelType: string = "NotMobile";
 export const channelWrapped: boolean = false;
 export const channelOs: string = "Other";
 export const settlementType: string = "GameFinished";
-export const rbowDomain: string = "10.10.88.52";
-export const rbowPort: string = "9092";
+export const rbowHost: string = "apps-gcp.uat1.evo-test.com";
 export const decimal: number = 2;
 export let timestamp: string = new Date().toJSON();
-export const currency = 'EUR';
+export const currency = "EUR";
 export const virtualTableId: string|null = null;
 
 //Jackpot Top Level values
@@ -48,13 +47,13 @@ export const reserveAmountInEur: number = 0.05;
 export const fixedAmount: number = 0.5;
 export const fixedAmountInEur: number = 0.5;
 
-//Preliminary settlement values
+//Preliminary settlement - cancel before settlement values
 export const tableId: string = "HoldemTable00001";
 export const gameType: string = "holdem";
 export const bet: number = 3.402011;
+export const payoff: number = 8.402011;
 export const betCode: string = "HoldemBet0000001";
 export const betCode1: string = "HoldemBet0000003";
-export const payoff: number = 8.402011;
 
 
 

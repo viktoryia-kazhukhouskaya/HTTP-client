@@ -1,42 +1,53 @@
-import * as globalVariables from '../util/globalVariables';
-import {randomGenerator} from "../util/randomGenerator";
+import * as variables from '../util/variables';
+import { generateString } from "../util/randomGenerator";
 import { PlayerFinalSettlementBody } from '../API3Methods/playerFinalSettlementRequest';
-import {betAmountForJackpot2, payoffAmountForJackpot, topPostId} from "../util/globalVariables";
 
 export const playerFinalSettlementBody: PlayerFinalSettlementBody = {
-    correlationId: randomGenerator.getRandomId(32),
-    playerId: globalVariables.playerId,
-    playerGameId: globalVariables.playerGameId,
-    gameRoundId: globalVariables.gameRoundId,
+    correlationId: generateString(32),
+    playerId: variables.playerId,
+    playerGameId: variables.playerGameId,
+    gameRoundId: variables.gameRoundId,
     reason: {
-        type: globalVariables.settlementType,
+        type: variables.settlementType,
         finishedTransactions: [
             {
-                txId: globalVariables.txId,
+                txId: variables.txId,
                 payoffs: [
                     {
-                        betId: globalVariables.betId,
-                        amount: globalVariables.betAmountForJackpot2,
+                        betId: variables.betId,
+                        amount: variables.payoffAmountForJackpot1,
                         jackpotPayoffDetails: null
                     },
                     {
-                        betId: globalVariables.betId1,
-                        amount: globalVariables.payoffAmountForJackpot,
+                        betId: variables.betId1,
+                        amount: variables.payoffAmountForJackpot,
                         jackpotPayoffDetails: [
                             {
-                                jackpotId: globalVariables.jackpotId,
-                                amount: globalVariables.payoffAmountForJackpot,
-                                Top: {
-                                    potId: globalVariables.topPostId,
-                                    amountInEur: globalVariables.payoffAmountForJackpot,
-                                    totalAmountOfWinningsEur: globalVariables.payoffAmountForJackpot
+                                jackpotId: variables.jackpotId,
+                                amount: variables.payoffAmountForJackpot,
+                                amountInBaseCurrency: null,
+                                pot: {
+                                    Top: {
+                                        potId: variables.jackpotTopPotId,
+                                        amountInEur: variables.payoffAmountForJackpot,
+                                        totalAmountOfWinningsEur: variables.payoffAmountForJackpot
+                                    }
                                 }
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                txId: variables.txId1,
+                payoffs: [
+                    {
+                        betId: variables.betId1,
+                        amount: variables.payoffAmountForJackpot1,
+                        jackpotPayoffDetails: null
                     }
                 ]
             }
         ]
     }
 };
-

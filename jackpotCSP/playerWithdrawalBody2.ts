@@ -1,27 +1,26 @@
-import * as globalVariables from '../util/globalVariables';
-import { randomGenerator } from "../util/randomGenerator";
+import * as variables from '../util/variables';
+import { generateString } from "../util/randomGenerator";
 import { PlayerWithdrawalBody } from '../API3Methods/playerWithdrawalRequest';
-import {betAmountForJackpot2, betCodeForJackpot2} from "../util/globalVariables";
 
 export const playerWithdrawalBody2: PlayerWithdrawalBody = {
-    correlationId: randomGenerator.getRandomId(32),
-    playerGameId: globalVariables.playerGameId,
-    gameRoundId: globalVariables.gameRoundId,
-    gameStartTime: globalVariables.timestamp,
-    sessionId: globalVariables.sessionId,
-    txId: globalVariables.txId1,
-    gameType: globalVariables.gameTypeForJackpot,
+    correlationId: generateString(32),
+    playerGameId: variables.playerGameId,
+    gameRoundId: variables.gameRoundId,
+    gameStartTime: variables.timestamp,
+    sessionId: variables.sessionId,
+    txId: variables.txId1,
+    gameType: variables.gameTypeForJackpot,
     table: {
-        tableId: globalVariables.tableIdForJackpot,
-        virtualTableId: globalVariables.virtualTableId
+        tableId: variables.tableIdForJackpot,
+        virtualTableId: variables.virtualTableId
     },
     bets: [
         {
-            betId: globalVariables.betId1,
-            code: globalVariables.betCodeForJackpot2,
-            amount: globalVariables.betAmountForJackpot2
+            betId: variables.betId1,
+            code: variables.betCodeForJackpot2,
+            amount: variables.betAmountForJackpot2
         }
     ],
-    placeTime: globalVariables.timestamp,
-    balanceId: globalVariables.balanceId
+    placeTime: variables.timestamp,
+    balanceId: variables.balanceId
 };

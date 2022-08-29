@@ -1,9 +1,9 @@
-import * as globalVariables from '../util/globalVariables';
-import { randomGenerator } from "../util/randomGenerator";
+import * as variables from '../util/variables';
+import { generateString } from "../util/randomGenerator";
 import { GetBalanceBody } from '../API3Methods/getBalanceRequest';
 
 export const getBalanceBody: GetBalanceBody = {
-    correlationId: randomGenerator.getRandomId(32),
-    sessionId: globalVariables.sessionId,
-    balanceId: globalVariables.balanceId
+    correlationId: generateString(32),
+    sessionId: variables.sessionId,
+    balanceId: variables.balanceId
 };
