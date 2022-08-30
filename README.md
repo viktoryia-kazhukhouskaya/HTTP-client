@@ -7,10 +7,16 @@ HTTP-client covers two PIG basic scenarios:
 
 2) Jackpot CSP - top Level.
 
-The project is based on Typescript. 
+The project is based on <b>Typescript</b>. 
 
-The project uses the "JEST" framework and the "Axious" library.
+The project uses the <b>"JEST"</b> framework and the <b>"Axious"</b> library.
 
-Command to install project devDependencies: npm install
+Command to install project devDependencies:
+```
+npm install
+```
 
-Command to run tests: npm run jest:test
+Command to run tests:
+```
+npm run jest:test
+```
