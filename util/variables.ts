@@ -16,13 +16,13 @@ export const jackpotTopPotId: string = generateString(16);
 export const reservePostId: string = generateString(16);
 
 //Default values
-export const casinoId: string = "testrbowevostdg1";
+export const casinoId: string = "ewctestcasino001";
 export const balanceId: string = "combined";
 export const channelType: string = "NotMobile";
 export const channelWrapped: boolean = false;
 export const channelOs: string = "Other";
 export const settlementType: string = "GameFinished";
-export const rbowHost: string = "apps-gcp.uat1.evo-test.com";
+export const rbowHost: string = "reliable-betting.apps.cit1.evo-test.com";
 export const decimal: number = 2;
 export let timestamp: string = new Date().toJSON();
 export const currency = "EUR";
