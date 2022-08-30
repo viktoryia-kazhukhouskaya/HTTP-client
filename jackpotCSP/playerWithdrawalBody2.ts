@@ -21,6 +21,6 @@ export const playerWithdrawalBody2: PlayerWithdrawalBody = {
             amount: variables.betAmountForJackpot2
         }
     ],
-    placeTime: variables.timestamp,
+    placeTime: new Date().toJSON(),
     balanceId: variables.balanceId
 };

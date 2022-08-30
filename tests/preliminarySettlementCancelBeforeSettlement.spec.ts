@@ -12,8 +12,8 @@ import { playerPreliminarySettlementBody } from "../multiTransactions/playerPrel
 import { playerWithdrawalBody } from "../multiTransactions/playerWithdrawalBody";
 import { playerWithdrawalBody2 } from "../multiTransactions/playerWithdrawalBody2";
 import { sessionInitializationBody } from "../multiTransactions/sessionInitializationBody";
-import { bet, betAmountForJackpot, betAmountForJackpot1, decimal, payoff, payoffAmountForJackpot, payoffAmountForJackpot1 } from "../util/variables";
-import {statusCodeOk, statusCodeCreated, statusCodeAccepted} from "../util/expectedStatusCodes";
+import { bet, decimal, payoff } from "../util/variables";
+import { statusCodeOk, statusCodeCreated, statusCodeAccepted } from "../util/expectedStatusCodes";
 import { errorValue } from "../util/expectedTextValue";
 
 let initialBalance: number;
@@ -26,14 +26,15 @@ describe("Preliminary settlement - cancel before the settlement scenario", () =>
         const response = await sessionInitialization(sessionInitializationBody);
         expect(response.status).toEqual(statusCodeOk);
         expect(response.statusText).not.toEqual(errorValue);
-        console.log(`start_session_initialization: ${response.config.data}`);
+        console.log(`start_session_initialization_request: ${response.config.data}`);
+        console.log(`start_session_initialization_response: ${JSON.stringify(response.data)}`);
         console.log(`status_code: ${response.status}`);
     });
     test("Complete session initialization", async () => {
         const response = await сompleteSessionInitialization(completeSessionInitializationBody);
         expect(response.status).toEqual(statusCodeCreated);
         expect(response.statusText).not.toEqual(errorValue);
-        console.log(`complete_session_initialization: ${response.config.data}`);
+        console.log(`start_session_initialization_request: ${response.config.data}`);
         console.log(`status_code: ${response.status}`);
     });
     test("Get balance", async () => {

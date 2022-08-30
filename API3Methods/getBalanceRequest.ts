@@ -10,8 +10,6 @@ export interface GetBalanceBody {
         virtualTableId: string|null;
     },
     gameType?: string;
-    gameSubType?: string|null;
-    mathId?: string|null;
 }
 
 export const getBalance = (body: object) => {

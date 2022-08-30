@@ -1,6 +1,5 @@
 import axios from "axios";
 import * as variables from '../util/variables';
-import {rbowHost} from "../util/variables";
 
 export interface PlayerWithdrawalBody {
     correlationId: string;
@@ -10,8 +9,6 @@ export interface PlayerWithdrawalBody {
     sessionId: string;
     txId: string;
     gameType: string;
-    gameSubType?: string|null;
-    mathId?: string|null;
     table: {
         tableId: string,
         virtualTableId: string|null

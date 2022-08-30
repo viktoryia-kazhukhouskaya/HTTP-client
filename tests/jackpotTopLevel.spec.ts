@@ -25,14 +25,15 @@ describe("Jackpot CSP - top level scenario", () => {
         const response = await sessionInitialization(sessionInitializationBody);
         expect(response.status).toEqual(statusCodeOk);
         expect(response.statusText).not.toEqual(errorValue);
-        console.log(`start_session_initialization: ${response.config.data}`);
+        console.log(`start_session_initialization_request: ${response.config.data}`);
+        console.log(`start_session_initialization_response: ${JSON.stringify(response.data)}`);
         console.log(`status_code: ${response.status}`);
     });
     test("Complete session initialization", async () => {
         const response = await сompleteSessionInitialization(completeSessionInitializationBody);
         expect(response.status).toEqual(statusCodeCreated);
         expect(response.statusText).not.toEqual(errorValue);
-        console.log(`complete_session_initialization: ${response.config.data}`);
+        console.log(`complete_session_initialization_request: ${response.config.data}`);
         console.log(`status_code: ${response.status}`);
     });
     test("Get balance", async () => {

@@ -50,6 +50,6 @@ export const playerWithdrawalBody: PlayerWithdrawalBody = {
             ]
         }
     ],
-    placeTime: variables.timestamp,
+    placeTime: new Date().toJSON(),
     balanceId: variables.balanceId
 };

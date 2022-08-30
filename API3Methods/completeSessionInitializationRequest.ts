@@ -5,11 +5,6 @@ export interface CompleteSessionInitializationBody {
     correlationId: string,
     sessionId: string,
     playerId: string
-    channel?: {
-        type: string,
-        wrapped: boolean,
-        os: string
-    }
 }
 
 export const сompleteSessionInitialization = (body: object) => {

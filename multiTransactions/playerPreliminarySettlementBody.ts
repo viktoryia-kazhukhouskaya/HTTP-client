@@ -7,7 +7,6 @@ export const playerPreliminarySettlementBody: PlayerPreliminarySettlementBody = 
     playerId: variables.playerId,
     playerGameId: variables.playerGameId,
     gameRoundId: variables.gameRoundId,
-    gameStartTime: variables.timestamp,
     cancelledTransactionIds: [variables.txId1],
     finishedTransactions: []
 };

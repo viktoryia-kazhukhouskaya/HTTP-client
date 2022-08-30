@@ -1,4 +1,4 @@
-import {alphabet, digits} from "./constantsForRandomGenerator";
+import { alphabet, digits } from "./constantsForRandomGenerator";
 
 export function generateString(length: number): string {
     let characters: string = alphabet + digits;

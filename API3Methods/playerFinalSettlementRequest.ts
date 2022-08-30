@@ -1,6 +1,5 @@
 import axios from "axios";
 import * as variables from '../util/variables';
-import {rbowHost} from "../util/variables";
 
 export interface PlayerFinalSettlementBody {
     correlationId: string,
