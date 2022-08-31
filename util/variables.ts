@@ -12,11 +12,11 @@ export const txId1: string = generateInteger(18);
 export const betId: string = generateString(32);
 export const betId1: string = generateString(32);
 export const jackpotId: string = generateString(16);
-export const jackpotTopPotId: string = generateString(16);
-export const reservePostId: string = generateString(16);
+export const topPotId: string = generateString(16);
+export const reservePotId: string = generateString(16);
 
 //Common values
-export const casinoId: string = "ewctestcasino001";
+export const casinoId: string = "testrbowevostdg1";
 export const rbowHost: string = "reliable-betting.apps.cit1.evo-test.com";
 export const decimal: number = 2;
 export const balanceId: string = "combined";
@@ -54,6 +54,4 @@ export const reserveAmount: number = 0.05;
 export const reserveAmountInEur: number = 0.05;
 export const fixedAmount: number = 0.5;
 export const fixedAmountInEur: number = 0.5;
-
-
 

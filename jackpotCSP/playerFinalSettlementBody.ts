@@ -28,7 +28,7 @@ export const playerFinalSettlementBody: PlayerFinalSettlementBody = {
                                 amountInBaseCurrency: null,
                                 pot: {
                                     Top: {
-                                        potId: variables.jackpotTopPotId,
+                                        potId: variables.topPotId,
                                         amountInEur: variables.payoffAmountForJackpot,
                                         totalAmountOfWinningsEur: variables.payoffAmountForJackpot
                                     }

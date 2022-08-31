@@ -19,10 +19,11 @@ let initialBalance: number;
 let currentBalance: number;
 let previousBalance: number;
 let expectedBalance: number;
+let response: any;
 
 describe("Preliminary settlement - cancel before the settlement scenario", () => {
     test("Start session initialization", async () => {
-        const response = await sessionInitialization(sessionInitializationBody);
+        response = await sessionInitialization(sessionInitializationBody);
         expect(response.data.currency).toEqual(sessionInitializationBody.currency);
         expect(response.data.licenseePlayerId).toEqual(sessionInitializationBody.licenseePlayerId);
         expect(response.data.licenseeSessionId).not.toBeNull();
@@ -32,13 +33,13 @@ describe("Preliminary settlement - cancel before the settlement scenario", () =>
         console.log(`status_code: ${response.status}`);
     });
     test("Complete session initialization", async () => {
-        const response = await сompleteSessionInitialization(completeSessionInitializationBody);
+        response = await сompleteSessionInitialization(completeSessionInitializationBody);
         expect(response.status).toEqual(statusCodeCreated);
         console.log(`complete_session_initialization_request: ${response.config.data}`);
         console.log(`status_code: ${response.status}`);
     });
     test("Get balance", async () => {
-        const response = await getBalance(getBalanceBody);
+        response = await getBalance(getBalanceBody);
         initialBalance = response.data.balances[0].amount;
         expect(response.status).toEqual(statusCodeOk);
         console.log(`initial_balance: ${initialBalance}`);
@@ -46,7 +47,7 @@ describe("Preliminary settlement - cancel before the settlement scenario", () =>
         console.log(`get_balance_response: ${JSON.stringify(response.data)}`);
     });
     test("Get balance for table", async () => {
-        const response = await getBalance(getBalanceForTableBody);
+        response = await getBalance(getBalanceForTableBody);
         currentBalance = response.data.balances[0].amount;
         expect(initialBalance).toEqual(currentBalance);
         expect(response.status).toEqual(statusCodeOk);
@@ -56,7 +57,7 @@ describe("Preliminary settlement - cancel before the settlement scenario", () =>
         console.log(`get_balance_request_for_table: ${JSON.stringify(response.data)}`);
     });
     test("Withdrawal 1", async () => {
-        const response = await playerWithdrawal(playerWithdrawalBody);
+        response = await playerWithdrawal(playerWithdrawalBody);
         previousBalance = currentBalance;
         currentBalance = response.data.balances[0].amount;
         expectedBalance = previousBalance - bet;
@@ -69,7 +70,7 @@ describe("Preliminary settlement - cancel before the settlement scenario", () =>
         console.log(`withdrawal_response: ${JSON.stringify(response.data)}`);
     });
     test("Withdrawal 2", async () => {
-        const response = await playerWithdrawal(playerWithdrawalBody2);
+        response = await playerWithdrawal(playerWithdrawalBody2);
         previousBalance = currentBalance;
         currentBalance = response.data.balances[0].amount;
         expectedBalance = previousBalance - bet;
@@ -82,12 +83,12 @@ describe("Preliminary settlement - cancel before the settlement scenario", () =>
         console.log(`withdrawal_response: ${JSON.stringify(response.data)}`);
     });
     test("Preliminary settlement - cancel", async () => {
-        const response = await playerPreliminarySettlement(playerPreliminarySettlementBody);
+        response = await playerPreliminarySettlement(playerPreliminarySettlementBody);
         expect(response.status).toEqual(statusCodeAccepted);
         console.log(`preliminary_settlement_request: ${response.config.data}`);
     });
     test("Get balance after preliminary settlement", async () => {
-        const response = await getBalance(getBalanceForTableBody);
+        response = await getBalance(getBalanceForTableBody);
         previousBalance = currentBalance;
         currentBalance = response.data.balances[0].amount;
         expectedBalance = previousBalance + bet;
@@ -99,13 +100,13 @@ describe("Preliminary settlement - cancel before the settlement scenario", () =>
         console.log(`get_balance_response: ${JSON.stringify(response.data)}`);
     });
     test("Final settlement", async () => {
-        const response = await playerFinalSettlement(playerFinalSettlementBody);
+        response = await playerFinalSettlement(playerFinalSettlementBody);
         expect(response.status).toEqual(statusCodeAccepted);
         console.log(`payoff: ${payoff}`);
         console.log(`final_settlement_request: ${response.config.data}`);
     });
     test("Get final balance", async () => {
-        const response = await getBalance(getBalanceBody);
+        response = await getBalance(getBalanceBody);
         previousBalance = currentBalance;
         currentBalance = response.data.balances[0].amount;
         expectedBalance = previousBalance + payoff;

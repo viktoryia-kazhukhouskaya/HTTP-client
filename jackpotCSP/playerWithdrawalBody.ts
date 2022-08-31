@@ -1,6 +1,7 @@
 import * as variables from '../util/variables';
 import { generateString } from "../util/randomGenerator";
 import { PlayerWithdrawalBody } from '../API3Methods/playerWithdrawalRequest';
+import {topPotId} from "../util/variables";
 
 export const playerWithdrawalBody: PlayerWithdrawalBody = {
     correlationId: generateString(32),
@@ -31,12 +32,12 @@ export const playerWithdrawalBody: PlayerWithdrawalBody = {
                     pots: [
                         {
                             Top: {
-                                potId: variables.jackpotTopPotId,
+                                potId: variables.topPotId,
                                 amount: variables.topAmount,
                                 amountInEur: variables.topAmountInEur
                             },
                             Reserve: {
-                                potId: variables.reservePostId,
+                                potId: variables.reservePotId,
                                 amount: variables.reserveAmount,
                                 amountInEur: variables.reserveAmountInEur
                             },
