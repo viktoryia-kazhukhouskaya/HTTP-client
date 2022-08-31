@@ -25,6 +25,7 @@ describe("Jackpot CSP - top level scenario", () => {
         expect(response.data.licenseePlayerId).toEqual(sessionInitializationBody.licenseePlayerId);
         expect(response.data.licenseeSessionId).not.toBeNull();
         expect(response.status).toEqual(statusCodeOk);
+        console.log(`status_code: ${response.status}`);
         console.log(`start_session_initialization_request: ${response.config.data}`);
         console.log(`start_session_initialization_response: ${JSON.stringify(response.data)}`);
         console.log(`status_code: ${response.status}`);
@@ -58,7 +59,7 @@ describe("Jackpot CSP - top level scenario", () => {
         previousBalance = currentBalance;
         currentBalance = response.data.balances[0].amount;
         expectedBalance = previousBalance - (betAmountForJackpot + betAmountForJackpot1);
-        expect(currentBalance.toFixed(decimal).toString()).toEqual(expectedBalance.toFixed(decimal));
+        expect(currentBalance.toFixed(decimal)).toEqual(expectedBalance.toFixed(decimal));
         expect(response.status).toEqual(statusCodeOk);
         console.log(`previous_balance: ${previousBalance}`);
         console.log(`current_balance: ${currentBalance}`);
@@ -71,7 +72,7 @@ describe("Jackpot CSP - top level scenario", () => {
         previousBalance = currentBalance;
         currentBalance = response.data.balances[0].amount;
         expectedBalance = previousBalance - betAmountForJackpot2;
-        expect(currentBalance.toFixed(decimal)).toEqual((expectedBalance).toFixed(decimal));
+        expect(currentBalance.toFixed(decimal)).toEqual(expectedBalance.toFixed(decimal));
         expect(response.status).toEqual(statusCodeOk);
         console.log(`previous_balance: ${previousBalance}`);
         console.log(`current_balance: ${currentBalance}`);
@@ -90,7 +91,7 @@ describe("Jackpot CSP - top level scenario", () => {
         previousBalance = currentBalance;
         currentBalance = response.data.balances[0].amount;
         expectedBalance = previousBalance + payoffAmountForJackpot + payoffAmountForJackpot1*2;
-        expect(currentBalance.toFixed(decimal).toString()).toBe(expectedBalance.toFixed(decimal));
+        expect(currentBalance.toFixed(decimal)).toEqual(expectedBalance.toFixed(decimal));
         expect(response.status).toEqual(statusCodeOk);
         console.log(`previous_balance: ${previousBalance}`);
         console.log(`current_balance: ${currentBalance}`);
