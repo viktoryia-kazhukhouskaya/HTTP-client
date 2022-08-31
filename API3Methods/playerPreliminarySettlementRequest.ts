@@ -10,6 +10,6 @@ export interface PlayerPreliminarySettlementBody {
     [finishedTransactions: string]: any;
 }
 
-export const playerPreliminarySettlement = (body: object) => {
+export const playerPreliminarySettlement = (body: object): any => {
    return axios.put(`http://${variables.rbowHost}/onewallet/api3/player_preliminary_settlement`, {...body})
 };

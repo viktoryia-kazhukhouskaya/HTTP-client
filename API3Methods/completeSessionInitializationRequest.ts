@@ -7,6 +7,6 @@ export interface CompleteSessionInitializationBody {
     playerId: string
 }
 
-export const сompleteSessionInitialization = (body: object) => {
+export const сompleteSessionInitialization = (body: object): any => {
     return axios.put(`http://${variables.rbowHost}/onewallet/api3/complete_session_initialization`, {...body})
 };

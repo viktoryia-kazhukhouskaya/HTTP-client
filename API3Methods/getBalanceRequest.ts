@@ -12,7 +12,7 @@ export interface GetBalanceBody {
     gameType?: string;
 }
 
-export const getBalance = (body: object) => {
+export const getBalance = (body: object): any => {
     return axios.post(`http://${variables.rbowHost}/onewallet/api3/get_balance`, {...body})
 };
 

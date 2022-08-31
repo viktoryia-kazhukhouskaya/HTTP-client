@@ -18,6 +18,6 @@ export interface PlayerWithdrawalBody {
     balanceId: string;
 }
 
-export const playerWithdrawal = (body: object) => {
+export const playerWithdrawal = (body: object): any => {
     return axios.put(`http://${variables.rbowHost}/onewallet/api3/player_withdrawal`, {...body})
 };

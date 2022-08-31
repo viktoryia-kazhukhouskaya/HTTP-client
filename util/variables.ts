@@ -15,18 +15,26 @@ export const jackpotId: string = generateString(16);
 export const jackpotTopPotId: string = generateString(16);
 export const reservePostId: string = generateString(16);
 
-//Default values
+//Common values
 export const casinoId: string = "ewctestcasino001";
+export const rbowHost: string = "reliable-betting.apps.cit1.evo-test.com";
+export const decimal: number = 2;
 export const balanceId: string = "combined";
 export const channelType: string = "NotMobile";
 export const channelWrapped: boolean = false;
 export const channelOs: string = "Other";
 export const settlementType: string = "GameFinished";
-export const rbowHost: string = "reliable-betting.apps.cit1.evo-test.com";
-export const decimal: number = 2;
-export let timestamp: string = new Date().toJSON();
 export const currency = "EUR";
 export const virtualTableId: string|null = null;
+export const timestamp: string = new Date().toJSON();
+
+//Preliminary settlement - cancel before settlement values
+export const tableId: string = "HoldemTable00001";
+export const gameType: string = "holdem";
+export const bet: number = 3.402011;
+export const payoff: number = 8.402011;
+export const betCode: string = "HoldemBet0000001";
+export const betCode1: string = "HoldemBet0000003";
 
 //Jackpot Top Level values
 export const tableIdForJackpot: string = "CSPTable00000001";
@@ -46,14 +54,6 @@ export const reserveAmount: number = 0.05;
 export const reserveAmountInEur: number = 0.05;
 export const fixedAmount: number = 0.5;
 export const fixedAmountInEur: number = 0.5;
-
-//Preliminary settlement - cancel before settlement values
-export const tableId: string = "HoldemTable00001";
-export const gameType: string = "holdem";
-export const bet: number = 3.402011;
-export const payoff: number = 8.402011;
-export const betCode: string = "HoldemBet0000001";
-export const betCode1: string = "HoldemBet0000003";
 
 
 

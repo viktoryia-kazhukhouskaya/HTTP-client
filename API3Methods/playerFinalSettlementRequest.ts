@@ -9,6 +9,6 @@ export interface PlayerFinalSettlementBody {
     [reason: string]: any
 }
 
-export const playerFinalSettlement = (body: object) => {
+export const playerFinalSettlement = (body: object): any => {
     return axios.put(`http://${variables.rbowHost}/onewallet/api3/player_final_settlement`, {...body})
 };

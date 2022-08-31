@@ -15,6 +15,6 @@ export interface SessionInitializationBody {
     }
 }
 
-export const sessionInitialization = (body: object) => {
+export const sessionInitialization = (body: object): any =>  {
     return axios.put(`http://${variables.rbowHost}/onewallet/api3/start_session_initialization`, {...body})
 };
