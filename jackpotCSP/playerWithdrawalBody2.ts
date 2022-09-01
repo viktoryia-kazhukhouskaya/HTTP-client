@@ -1,6 +1,6 @@
-import * as variables from '../util/variables';
+import * as variables from "../util/variables";
 import { generateString } from "../util/randomGenerator";
-import { PlayerWithdrawalBody } from '../API3Methods/playerWithdrawalRequest';
+import { PlayerWithdrawalBody } from "../API3Methods/playerWithdrawalRequest";
 
 export const playerWithdrawalBody2: PlayerWithdrawalBody = {
     correlationId: generateString(32),

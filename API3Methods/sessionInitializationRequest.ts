@@ -1,5 +1,5 @@
 import axios from "axios";
-import * as variables from '../util/variables';
+import * as variables from "../util/variables";
 
 export interface SessionInitializationBody {
     correlationId: string,
@@ -13,7 +13,7 @@ export interface SessionInitializationBody {
         wrapped: boolean,
         os: string
     }
-}
+};
 
 export const sessionInitialization = (body: object): any =>  {
     return axios.put(`http://${variables.rbowHost}/onewallet/api3/start_session_initialization`, {...body})

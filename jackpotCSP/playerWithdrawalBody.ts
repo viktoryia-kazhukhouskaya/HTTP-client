@@ -1,7 +1,6 @@
-import * as variables from '../util/variables';
+import * as variables from "../util/variables";
 import { generateString } from "../util/randomGenerator";
-import { PlayerWithdrawalBody } from '../API3Methods/playerWithdrawalRequest';
-import {topPotId} from "../util/variables";
+import { PlayerWithdrawalBody } from "../API3Methods/playerWithdrawalRequest";
 
 export const playerWithdrawalBody: PlayerWithdrawalBody = {
     correlationId: generateString(32),
@@ -49,7 +48,7 @@ export const playerWithdrawalBody: PlayerWithdrawalBody = {
                     ]
                 }
             ]
-        }
+        },
     ],
     placeTime: new Date().toJSON(),
     balanceId: variables.balanceId

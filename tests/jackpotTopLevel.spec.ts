@@ -1,9 +1,9 @@
-import { playerFinalSettlement } from '../API3Methods/playerFinalSettlementRequest';
-import { sessionInitialization } from '../API3Methods/sessionInitializationRequest';
-import { сompleteSessionInitialization } from '../API3Methods/completeSessionInitializationRequest';
+import { playerFinalSettlement } from "../API3Methods/playerFinalSettlementRequest";
+import { sessionInitialization } from "../API3Methods/sessionInitializationRequest";
+import { сompleteSessionInitialization } from "../API3Methods/completeSessionInitializationRequest";
 import { getBalance } from "../API3Methods/getBalanceRequest";
 import { playerWithdrawal } from "../API3Methods/playerWithdrawalRequest";
-import { completeSessionInitializationBody } from '../jackpotCSP/completeSessionInitializationBody';
+import { completeSessionInitializationBody } from "../jackpotCSP/completeSessionInitializationBody";
 import { getBalanceBody } from "../jackpotCSP/getBalanceBody";
 import { getBalanceForTableBody } from "../jackpotCSP/getBalanceForTableBody";
 import { playerFinalSettlementBody } from "../jackpotCSP/playerFinalSettlementBody";

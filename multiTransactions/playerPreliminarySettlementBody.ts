@@ -1,6 +1,6 @@
-import * as variables from '../util/variables';
+import * as variables from "../util/variables";
 import { generateString } from "../util/randomGenerator";
-import { PlayerPreliminarySettlementBody } from '../API3Methods/playerPreliminarySettlementRequest';
+import { PlayerPreliminarySettlementBody } from "../API3Methods/playerPreliminarySettlementRequest";
 
 export const playerPreliminarySettlementBody: PlayerPreliminarySettlementBody = {
     correlationId: generateString(32),

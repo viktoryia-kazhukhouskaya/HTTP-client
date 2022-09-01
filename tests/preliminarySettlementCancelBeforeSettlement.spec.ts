@@ -1,10 +1,10 @@
-import { getBalance } from '../API3Methods/getBalanceRequest';
-import { playerWithdrawal } from '../API3Methods/playerWithdrawalRequest';
-import { playerPreliminarySettlement } from '../API3Methods/playerPreliminarySettlementRequest'
-import { playerFinalSettlement } from '../API3Methods/playerFinalSettlementRequest';
-import { sessionInitialization } from '../API3Methods/sessionInitializationRequest';
-import { сompleteSessionInitialization } from '../API3Methods/completeSessionInitializationRequest';
-import { completeSessionInitializationBody } from '../multiTransactions/completeSessionInitializationBody';
+import { getBalance } from "../API3Methods/getBalanceRequest";
+import { playerWithdrawal } from "../API3Methods/playerWithdrawalRequest";
+import { playerPreliminarySettlement } from "../API3Methods/playerPreliminarySettlementRequest";
+import { playerFinalSettlement } from "../API3Methods/playerFinalSettlementRequest";
+import { sessionInitialization } from "../API3Methods/sessionInitializationRequest";
+import { сompleteSessionInitialization } from "../API3Methods/completeSessionInitializationRequest";
+import { completeSessionInitializationBody } from "../multiTransactions/completeSessionInitializationBody";
 import { getBalanceBody } from "../multiTransactions/getBalanceBody";
 import { getBalanceForTableBody } from "../multiTransactions/getBalanceForTableBody";
 import { playerFinalSettlementBody } from "../multiTransactions/playerFinalSettlementBody";
